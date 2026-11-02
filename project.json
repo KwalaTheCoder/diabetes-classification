@@ -1,0 +1,10 @@
+{
+  "domain": "diabetes",
+  "task": "classification",
+  "targets": [
+    "Outcome"
+  ],
+  "exclude": [
+    "Outcome2"
+  ]
+}
