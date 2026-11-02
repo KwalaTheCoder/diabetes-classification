@@ -1,0 +1,220 @@
+{
+  "project": "diabetes",
+  "task": "classification",
+  "seed": 42,
+  "folds": 5,
+  "scoring": "f1_macro",
+  "cv_selection_score": 0.7592326792751412,
+  "selected_model": "ExtraTreesClassifier",
+  "leaderboard": [
+    {
+      "model": "DummyClassifier",
+      "parameters": {},
+      "cv_score": 0.39447885675267036,
+      "cv_std": 0.0007803736038628495
+    },
+    {
+      "model": "LogisticRegression",
+      "parameters": {
+        "model__C": 0.1
+      },
+      "cv_score": 0.7386834226642414,
+      "cv_std": 0.014372348032479797
+    },
+    {
+      "model": "LogisticRegression",
+      "parameters": {
+        "model__C": 1
+      },
+      "cv_score": 0.7466106171662439,
+      "cv_std": 0.010393371405311245
+    },
+    {
+      "model": "LogisticRegression",
+      "parameters": {
+        "model__C": 10
+      },
+      "cv_score": 0.7436849893160448,
+      "cv_std": 0.0038409086359638142
+    },
+    {
+      "model": "RandomForestClassifier",
+      "parameters": {
+        "model__max_depth": null,
+        "model__min_samples_leaf": 2
+      },
+      "cv_score": 0.752834203172017,
+      "cv_std": 0.024577812356139435
+    },
+    {
+      "model": "RandomForestClassifier",
+      "parameters": {
+        "model__max_depth": null,
+        "model__min_samples_leaf": 5
+      },
+      "cv_score": 0.7570164390091927,
+      "cv_std": 0.023877176084104834
+    },
+    {
+      "model": "RandomForestClassifier",
+      "parameters": {
+        "model__max_depth": 12,
+        "model__min_samples_leaf": 2
+      },
+      "cv_score": 0.7465329641294467,
+      "cv_std": 0.020428379312557803
+    },
+    {
+      "model": "RandomForestClassifier",
+      "parameters": {
+        "model__max_depth": 12,
+        "model__min_samples_leaf": 5
+      },
+      "cv_score": 0.7570164390091927,
+      "cv_std": 0.023877176084104834
+    },
+    {
+      "model": "ExtraTreesClassifier",
+      "parameters": {
+        "model__max_depth": null,
+        "model__min_samples_leaf": 2
+      },
+      "cv_score": 0.7431890682892027,
+      "cv_std": 0.015366293812663882
+    },
+    {
+      "model": "ExtraTreesClassifier",
+      "parameters": {
+        "model__max_depth": null,
+        "model__min_samples_leaf": 5
+      },
+      "cv_score": 0.7540167080811988,
+      "cv_std": 0.030996809877130795
+    },
+    {
+      "model": "ExtraTreesClassifier",
+      "parameters": {
+        "model__max_depth": 12,
+        "model__min_samples_leaf": 2
+      },
+      "cv_score": 0.7515011893747987,
+      "cv_std": 0.014122840038926254
+    },
+    {
+      "model": "ExtraTreesClassifier",
+      "parameters": {
+        "model__max_depth": 12,
+        "model__min_samples_leaf": 5
+      },
+      "cv_score": 0.7592326792751412,
+      "cv_std": 0.024215138225355256
+    }
+  ],
+  "holdout": {
+    "accuracy": 0.7337662337662337,
+    "balanced_accuracy": 0.7396296296296296,
+    "f1_macro": 0.7225225225225225,
+    "classification_report": {
+      "0": {
+        "precision": 0.8470588235294118,
+        "recall": 0.72,
+        "f1-score": 0.7783783783783784,
+        "support": 100.0
+      },
+      "1": {
+        "precision": 0.5942028985507246,
+        "recall": 0.7592592592592593,
+        "f1-score": 0.6666666666666666,
+        "support": 54.0
+      },
+      "accuracy": 0.7337662337662337,
+      "macro avg": {
+        "precision": 0.7206308610400682,
+        "recall": 0.7396296296296296,
+        "f1-score": 0.7225225225225225,
+        "support": 154.0
+      },
+      "weighted avg": {
+        "precision": 0.7583950576277941,
+        "recall": 0.7337662337662337,
+        "f1-score": 0.7392067392067392,
+        "support": 154.0
+      }
+    },
+    "classes": [
+      0,
+      1
+    ],
+    "confusion_matrix": [
+      [
+        72,
+        28
+      ],
+      [
+        13,
+        41
+      ]
+    ],
+    "roc_auc": 0.8124074074074074,
+    "average_precision": 0.6852667909494867,
+    "positive_class": "1"
+  },
+  "train_rows": 614,
+  "test_rows": 154,
+  "input_rows": 768,
+  "missing_target_rows_removed": 0,
+  "grouped_split": false,
+  "group_column": null,
+  "features": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "data_fingerprint": "09ab6910d807fb2561307b772010b7462c6b190b3cfb420d9f2c057fe70c47e7",
+  "versions": {
+    "python": "3.12.14",
+    "sklearn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  },
+  "note": "CV scores select the model and are optimistic; holdout metrics are the final evaluation. Negative MAE scores are higher-is-better. Synthetic tests are not real-data benchmarks.",
+  "holdout_permutation_importance": {
+    "Pregnancies": {
+      "mean": -0.004195107801965659,
+      "std": 0.012613639732411988
+    },
+    "Glucose": {
+      "mean": 0.10426630703442726,
+      "std": 0.027616160875864923
+    },
+    "BloodPressure": {
+      "mean": 0.012028830154505487,
+      "std": 0.009839359533051904
+    },
+    "SkinThickness": {
+      "mean": 0.003871133886316591,
+      "std": 0.013206165968718302
+    },
+    "Insulin": {
+      "mean": 0.012758491575642617,
+      "std": 0.010505969463518849
+    },
+    "BMI": {
+      "mean": 0.02411495426683392,
+      "std": 0.017863836920374274
+    },
+    "DiabetesPedigreeFunction": {
+      "mean": 0.007150660595806646,
+      "std": 0.012600070362891215
+    },
+    "Age": {
+      "mean": 0.030248428751692757,
+      "std": 0.019906181463014254
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "diabetes-classification",
+  "reused_verified_identical_input": true,
+  "data_file": "Diabetes/diabetes.csv",
+  "data_sha256": "698c203a14aa31941d2251175330c9199f3ccdb31597abbba2a3e35416257a72",
+  "folds": 5,
+  "seed": 42,
+  "tuned": true,
+  "exit_code": 0
+}

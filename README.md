@@ -2,6 +2,10 @@
 
 Standalone refactor of **KwalaTheCoder's independently written Diabetes.ipynb**. The original work is preserved in `legacy/`; the modern implementation is AI-assisted. See `PROVENANCE.json` for provenance and source hashes.
 
+## Measured evaluation
+
+See [RESULTS.md](RESULTS.md) for the locked real-data experiment, exact input hash, holdout metrics, CV baseline and limitations.
+
 ## What changed
 
 Treats zero Glucose, BloodPressure, SkinThickness, Insulin and BMI as missing measurements. Medians are fitted within training folds. Removes global SMOTE and PCA fitted outside CV. Safe domain ratios, class-weighted baselines and ensembles are selected by CV; all metrics use the selected model's predictions.
@@ -10,7 +14,7 @@ Treats zero Glucose, BloodPressure, SkinThickness, Insulin and BMI as missing me
 
 CSV with Outcome and clinical measurements, typically Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction and Age.
 
-Data is not included in the source repository. Obtain the original dataset legally and verify its provenance, schema and license. No real-data accuracy claim is made. Missing labels are removed and counted in the report; missing predictors are imputed. Do not add identifiers, post-outcome fields or target-derived columns as predictors. Columns beyond the documented schema require manual leakage review.
+Data is not included in the source repository. Obtain the original dataset legally and verify its provenance, schema and license. Measured results on the supplied dataset are documented in [RESULTS.md](RESULTS.md). Missing labels are removed and counted in the report; missing predictors are imputed. Do not add identifiers, post-outcome fields or target-derived columns as predictors. Columns beyond the documented schema require manual leakage review.
 
 ## Run
 
